@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TEST - Celeb's Life</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <link rel="stylesheet" href="Celeb's_Life.css" />
+  </head>
+  <body>
+    <header>
+      <a
+        href="file:///C:/Users/%D0%95%D0%BD%D0%BB%D0%B8%D0%BA/Desktop/final/Celeb's_Life.html"
+        ><img
+          align="center"
+          src="images/Celeb's_Life.png"
+          width="659"
+          height="93"
+      /></a>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a
+            href="file:///C:/Users/%D0%95%D0%BD%D0%BB%D0%B8%D0%BA/Desktop/final/Celeb's_Life.html"
+            >HOME</a
+          >
+        </li>
+        <li>
+          <a
+            href="file:///C:/Users/%D0%95%D0%BD%D0%BB%D0%B8%D0%BA/Desktop/final/NEWS.html"
+            >NEWS</a
+          >
+        </li>
+        <li>
+          <a
+            href="file:///C:/Users/%D0%95%D0%BD%D0%BB%D0%B8%D0%BA/Desktop/final/CONTACTS.html"
+            >CONTACTS</a
+          >
+        </li>
+        <li>
+          <a
+            href="file:///C:/Users/%D0%95%D0%BD%D0%BB%D0%B8%D0%BA/Desktop/final/TEST.html"
+            >TEST</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <div class="container-600x600">
+      <div class="text-inside-head6">
+        <p>Test Time!</p>
+      </div>
+      <div class="container-900x900">
+        <div class="column1">
+          <div class="container-600x600">
+            <p>1. What record did 'Scream 6' break in its opening weekend?</p>
+            <p>a) Answer: $67 million at the box office.</p>
+            <p>b) Answer: $76 million at the box office.</p>
+            <button id="rightA1">Answer "a"</button>
+            <button id="wrongA1">Answer "b"</button>
+            <audio id="audioPlayerR1" src="right.mp3"></audio>
+            <audio id="audioPlayerW1" src="wrong.mp3"></audio>
+            <br /><br />
+            <p>2. Who were the new stars featured in 'Scream 6'?</p>
+            <p>a) Answer: Jenna Ortega, Melissa Barrera, Jasmin Savoy Brown</p>
+            <p>
+              b) Answer: Jenna Ortega, Melissa Barrera, Mason Gooding, and
+              Jasmin Savoy Brown
+            </p>
+            <button id="wrongA2">Answer "a"</button>
+            <button id="rightA2">Answer "b"</button>
+            <audio id="audioPlayerR2" src="right.mp3"></audio>
+            <audio id="audioPlayerW2" src="wrong.mp3"></audio>
+            <br /><br />
+            <p>
+              3. Why was Melissa Barrera removed from the cast of 'Scream 7'?
+            </p>
+            <p>
+              a) Answer: Answer: She was fired over her comments regarding the
+              Russia-Ukrain conflict.
+            </p>
+            <p>
+              b) Answer: Answer: She was fired over her comments regarding the
+              Israel-Hamas conflict.
+            </p>
+            <button id="wrongA3">Answer "a"</button>
+            <button id="rightA3">Answer "b"</button>
+            <audio id="audioPlayerR3" src="right.mp3"></audio>
+            <audio id="audioPlayerW3" src="wrong.mp3"></audio>
+            <br /><br />
+            <p>
+              4. When did Travis Kelce reveal his admiration for Taylor Swift's
+              performance at Arrowhead Stadium?
+            </p>
+            <p>
+              a) Answer: He talked about it in October on The Pat McAfee Show.
+            </p>
+            <p>b) Answer: He revealed it during an interview in January.</p>
+            <button id="rightA4">Answer "a"</button>
+            <button id="wrongA4">Answer "b"</button>
+            <audio id="audioPlayerR4" src="right.mp3"></audio>
+            <audio id="audioPlayerW4" src="wrong.mp3"></audio>
+            <br /><br />
+            <p>
+              5. According to Travis Kelce, how did he feel about Taylor Swift's
+              aura in their relationship?
+            </p>
+            <p>
+              a) Answer: He said he had never dated anyone with that kind of
+              aura about them.
+            </p>
+            <p>b) Answer: He felt embarrassed about her aura.</p>
+            <button id="rightA5">Answer "a"</button>
+            <button id="wrongA5">Answer "b"</button>
+            <audio id="audioPlayerR5" src="right.mp3"></audio>
+            <audio id="audioPlayerW5" src="wrong.mp3"></audio>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+          items: 4,
+          autoplay: true,
+          autoplayHoverPause: true,
+          loop: true,
+          margin: 10,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            600: {
+              items: 4,
+            },
+          },
+        });
+      });
+
+      const rightA1 = document.getElementById("rightA1");
+      const wrongA1 = document.getElementById("wrongA1");
+      const audioPlayerR1 = document.getElementById("audioPlayerR1");
+      const audioPlayerW1 = document.getElementById("audioPlayerW1");
+
+      rightA1.addEventListener("click", function () {
+        audioPlayerR1.play();
+      });
+
+      wrongA1.addEventListener("click", function () {
+        audioPlayerW1.play();
+      });
+
+      const rightA2 = document.getElementById("rightA2");
+      const wrongA2 = document.getElementById("wrongA2");
+      const audioPlayerR2 = document.getElementById("audioPlayerR2");
+      const audioPlayerW2 = document.getElementById("audioPlayerW2");
+
+      rightA2.addEventListener("click", function () {
+        audioPlayerR2.play();
+      });
+
+      wrongA2.addEventListener("click", function () {
+        audioPlayerW2.play();
+      });
+
+      const rightA3 = document.getElementById("rightA3");
+      const wrongA3 = document.getElementById("wrongA3");
+      const audioPlayerR3 = document.getElementById("audioPlayerR3");
+      const audioPlayerW3 = document.getElementById("audioPlayerW3");
+
+      rightA3.addEventListener("click", function () {
+        audioPlayerR3.play();
+      });
+
+      wrongA3.addEventListener("click", function () {
+        audioPlayerW3.play();
+      });
+
+      const rightA4 = document.getElementById("rightA4");
+      const wrongA4 = document.getElementById("wrongA4");
+      const audioPlayerR4 = document.getElementById("audioPlayerR4");
+      const audioPlayerW4 = document.getElementById("audioPlayerW4");
+
+      rightA4.addEventListener("click", function () {
+        audioPlayerR4.play();
+      });
+
+      wrongA4.addEventListener("click", function () {
+        audioPlayerW4.play();
+      });
+
+      const rightA5 = document.getElementById("rightA5");
+      const wrongA5 = document.getElementById("wrongA5");
+      const audioPlayerR5 = document.getElementById("audioPlayerR5");
+      const audioPlayerW5 = document.getElementById("audioPlayerW5");
+
+      rightA5.addEventListener("click", function () {
+        audioPlayerR5.play();
+      });
+
+      wrongA5.addEventListener("click", function () {
+        audioPlayerW5.play();
+      });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  </body>
+</html>

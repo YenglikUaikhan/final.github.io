@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CONTACTS - Celeb's Life</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <link rel="stylesheet" href="Celeb's_Life.css" />
+  </head>
+  <body>
+    <header>
+      <a
+        href="file:///C:/Users/%D0%95%D0%BD%D0%BB%D0%B8%D0%BA/Desktop/final/Celeb's_Life.html"
+        ><img
+          align="center"
+          src="images/Celeb's_Life.png"
+          width="659"
+          height="93"
+      /></a>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a
+            href="file:///C:/Users/%D0%95%D0%BD%D0%BB%D0%B8%D0%BA/Desktop/final/Celeb's_Life.html"
+            >HOME</a
+          >
+        </li>
+        <li>
+          <a
+            href="file:///C:/Users/%D0%95%D0%BD%D0%BB%D0%B8%D0%BA/Desktop/final/NEWS.html"
+            >NEWS</a
+          >
+        </li>
+        <li>
+          <a
+            href="file:///C:/Users/%D0%95%D0%BD%D0%BB%D0%B8%D0%BA/Desktop/final/CONTACTS.html"
+            >CONTACTS</a
+          >
+        </li>
+        <li>
+          <a
+            href="file:///C:/Users/%D0%95%D0%BD%D0%BB%D0%B8%D0%BA/Desktop/final/TEST.html"
+            >TEST</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <div class="container-600x600">
+      <div class="text-inside-head6">
+        <p>Contact with Us</p>
+      </div>
+      <div class="container-900x900">
+        <div class="column1">
+          <div class="container-600x600">
+            <form>
+              <label for="name" style="font-family: verdana; color: #262521"
+                >Name:</label
+              >
+              <input type="text" id="name" name="name" /><br />
+              <label for="email" style="font-family: verdana; color: #262521"
+                >Email:</label
+              >
+              <input type="email" id="email" name="email" /><br />
+              <label for="message" style="font-family: verdana; color: #262521"
+                >Message:</label
+              ><br />
+              <textarea id="message" name="message"></textarea><br />
+              <button id="messageButton">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-600x600">
+      <div class="text-inside-head6">
+        <p>Other Contact Details</p>
+      </div>
+      <div class="text-inside-head7">
+        <p>Email: enlik.uaikhan@gmail.com</p>
+        <p>Phone: +7 777 165 53 03</p>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+      var messageButton = document.getElementById("messageButton");
+      messageButton.addEventListener("click", function () {
+        alert("Your message has been sent!");
+      });
+
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+          items: 4,
+          autoplay: true,
+          autoplayHoverPause: true,
+          loop: true,
+          margin: 10,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            600: {
+              items: 4,
+            },
+          },
+        });
+      });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  </body>
+</html>
